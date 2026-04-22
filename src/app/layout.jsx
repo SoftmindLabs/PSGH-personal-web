@@ -1,7 +1,9 @@
 import { Figtree, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 import SmoothScrollWrapper from "@/components/Lenis";
 import "./globals.css";
+
 const figtree = Figtree({
   variable: "--font-figtree",
   weight: ["300", "400", "500", "600", "700", "800", "900"],
@@ -28,7 +30,7 @@ export default function RootLayout({ children }) {
         <SmoothScrollWrapper>
           <Navbar />
           {children}
-          {/* <Footer /> */}
+          <Footer />
         </SmoothScrollWrapper>
         {/* <Toaster
           theme="dark"
