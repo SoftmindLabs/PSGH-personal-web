@@ -17,7 +17,7 @@ export default function HeroSection() {
       <div className="absolute bottom-0 left-0 right-0 h-[35%] bg-linear-to-t from-black/70 via-black/30 to-transparent z-1 pointer-events-none" />
 
       <div className="relative z-10 flex flex-col min-h-[80vh]">
-        <div className="absolute top-6 left-1/2 -translate-x-1/2 w-[40%] hidden lg:flex items-start justify-between text-white">
+        <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[40%] hidden lg:flex items-start justify-between text-white">
           <p className="text-base">@ {new Date().getFullYear()}</p>
           <ul>
             <li>Research</li>

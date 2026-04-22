@@ -65,8 +65,10 @@ function Footer() {
 
         {/* Bottom bar — same grid so nav aligns under headline */}
         <div className="border-t border-black/10 pt-8 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6 text-black">
-          <p className="text-sm md:text-2xl">Designed by Softmindlabs</p>
-          <div className="flex items-center justify-between gap-8 md:gap-16">
+          <p className="text-sm md:text-2xl md:order-1 order-2">
+            Designed by Softmindlabs
+          </p>
+          <div className="flex items-start md:items-center flex-col md:justify-between gap-5 md:gap-16  ">
             {["Home", "Projects", "Services", "About us", "Blog"].map(
               (link) => (
                 <Link
