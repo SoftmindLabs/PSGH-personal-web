@@ -27,6 +27,7 @@ export default function SmoothScroll({ children }) {
     const lenis = lenisRef.current?.lenis;
     if (!lenis) return;
 
+    ScrollTrigger.getAll().forEach((t) => t.kill());
     lenis.stop();
     lenis.scrollTo(0, { immediate: true });
     lenis.start();

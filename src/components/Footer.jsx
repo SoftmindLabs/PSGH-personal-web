@@ -1,25 +1,42 @@
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
+const socials = [
+  { label: "LinkedIn", href: "https://linkedin.com" },
+  { label: "Google Scholar", href: "https://googlescholar.com" },
+  { label: "Facebook", href: "https://facebook.com" },
+  { label: "Instagram", href: "https://instagram.com" },
+];
+
+const navLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Research", href: "/research" },
+  { label: "Publications", href: "/publications" },
+  { label: "Blog", href: "/contact" },
+];
+
 function Footer() {
   return (
     <footer className="w-full bg-[#f5f5f3] mt-20 min-h-[98vh] flex flex-col">
       <div className="w-[95%] px-2 md:px-10 mx-auto py-16 flex flex-col justify-between flex-1 gap-10">
-        {/* Top row: Get in touch + socials on same horizontal line */}
+        {/* Top row: Get in touch + socials */}
         <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10">
-          <div className="items-center justify-start flex ">
-            <p className="font-semibold text-base md:text-xl border-l-5 uppercase pl-3">
+          <div className="items-center justify-start flex">
+            <p className="font-semibold text-base text-black md:text-xl border-l-5 uppercase pl-3">
               get in touch
             </p>
           </div>
-          <div className="flex items-center justify-between gap-8 md:gap-16 ">
-            {["Instagram", "X (Twitter)", "LinkedIn", "Dribbble"].map((s) => (
+          <div className="flex items-center justify-between gap-8 md:gap-16">
+            {socials.map((s) => (
               <a
-                key={s}
-                href="#"
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-black text-sm md:text-2xl hover:underline"
               >
-                {s}
+                {s.label}
               </a>
             ))}
           </div>
@@ -27,7 +44,7 @@ function Footer() {
 
         {/* Main grid */}
         <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10 mt-10 items-start flex-1">
-          {/* Left: contact details — number aligned horizontally with headline */}
+          {/* Left: contact details */}
           <div className="flex flex-col gap-8 text-black text-sm md:text-2xl">
             <div className="flex flex-col gap-1">
               <p>+001 313 759 968 345</p>
@@ -63,23 +80,21 @@ function Footer() {
           </div>
         </div>
 
-        {/* Bottom bar — same grid so nav aligns under headline */}
+        {/* Bottom bar */}
         <div className="border-t border-black/10 pt-8 grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-6 text-black">
           <p className="text-sm md:text-2xl md:order-1 order-2">
             Designed by Softmindlabs
           </p>
-          <div className="flex items-start md:items-center flex-col md:justify-between gap-5 md:gap-16  ">
-            {["Home", "Projects", "Services", "About us", "Blog"].map(
-              (link) => (
-                <Link
-                  key={link}
-                  href={`/${link.toLowerCase().replace(" ", "-")}`}
-                  className="text-black text-sm md:text-2xl hover:underline"
-                >
-                  {link}
-                </Link>
-              ),
-            )}
+          <div className="md:order-2 order-1 flex items-start md:items-center md:flex-row flex-col md:justify-between gap-5 md:gap-16">
+            {navLinks.map((link) => (
+              <Link
+                key={link.label}
+                href={link.href}
+                className="text-black text-sm md:text-2xl hover:underline"
+              >
+                {link.label}
+              </Link>
+            ))}
             <p className="text-sm md:text-2xl">©Paul.D. All rights reserved.</p>
           </div>
         </div>

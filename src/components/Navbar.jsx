@@ -16,6 +16,7 @@ function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileScrolled, setMobileScrolled] = useState(false);
   const pathname = usePathname();
+  const isHome = pathname === "/";
 
   useEffect(() => {
     const timeout = setTimeout(() => setMenuOpen(false), 300);
@@ -31,29 +32,35 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const mobileColor = isHome
+    ? mobileScrolled
+      ? "text-black"
+      : "text-white"
+    : "text-black";
+
+  const desktopColor = isHome
+    ? scrolled
+      ? "text-black"
+      : "text-white"
+    : "text-black";
+
   return (
     <>
       <header
         className={`fixed h-15 md:top-5 px-2 md:px-10 left-0 right-0 z-40 flex items-center justify-between w-full md:w-[95%] mx-auto transition-colors duration-500
-          ${mobileScrolled ? "bg-white" : "bg-transparent"}
+          ${isHome ? (mobileScrolled ? "bg-white" : "bg-transparent") : "bg-white"}
           md:bg-transparent
         `}
       >
         <Link
           href="/"
-          className={`font-bold text-2xl md:text-3xl tracking-tight transition-colors duration-500
-            ${mobileScrolled ? "text-black" : "text-white"}
-            md:${scrolled ? "text-black" : "text-white"}
-          `}
+          className={`font-bold text-2xl md:text-3xl tracking-tight transition-colors duration-500 ${mobileColor} md:${desktopColor}`}
         >
           Paul.D
         </Link>
         <button
           onClick={() => setMenuOpen(true)}
-          className={`font-medium text-2xl tracking-tight cursor-pointer transition-colors duration-500
-            ${mobileScrolled ? "text-black" : "text-white"}
-            md:${scrolled ? "text-black" : "text-white"}
-          `}
+          className={`font-medium text-2xl tracking-tight cursor-pointer transition-colors duration-500 ${mobileColor} md:${desktopColor}`}
         >
           Menu
         </button>

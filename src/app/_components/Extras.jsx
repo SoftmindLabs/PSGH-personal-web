@@ -4,17 +4,17 @@ function Stats() {
   const stats = [
     {
       label: "Years of experience",
-      value: "09+",
+      value: "49+",
       className: "!bg-transparent !border-transparent",
     },
     {
       label: "Satisfied clients",
-      value: "90+",
+      value: "92+",
       className: "!bg-transparent !border-transparent",
     },
     {
       label: "Projects delivered",
-      value: "90+",
+      value: "93+",
       className: "!bg-transparent !border-transparent",
     },
   ];
