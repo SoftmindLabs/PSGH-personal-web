@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { shimmer } from "@/lib/placeholder";
 
 const clients = [
   {
@@ -115,6 +116,8 @@ function Clients() {
                     alt={review.title}
                     fill
                     className="object-cover"
+                    placeholder="blur"
+                    blurDataURL={shimmer}
                   />
                 </div>
 
@@ -136,6 +139,8 @@ function Clients() {
                         alt={review.name}
                         fill
                         className="object-cover"
+                        placeholder="blur"
+                        blurDataURL={shimmer}
                       />
                     </div>
                     <div>

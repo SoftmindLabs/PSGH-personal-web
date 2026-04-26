@@ -5,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 
 function ContactForm() {
   const formRef = useRef(null);
-  const [status, setStatus] = useState(null); // null | "sending" | "success" | "error"
+  const [status, setStatus] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -29,14 +29,12 @@ function ContactForm() {
   return (
     <section className="w-[95%] px-2 md:px-10 mx-auto  md:pt-30">
       <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10 items-start">
-        {/* Left label */}
         <div className="md:sticky md:top-20">
           <p className="font-semibold text-base md:text-xl border-l-5 uppercase pl-3">
             Get In Touch
           </p>
         </div>
 
-        {/* Right: form */}
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-3">
             <h2 className="font-bold text-3xl md:text-5xl text-black tracking-tighter">
@@ -54,7 +52,6 @@ function ContactForm() {
             onSubmit={handleSubmit}
             className="flex flex-col gap-8 mt-5"
           >
-            {/* Row 1 */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-16">
               <input
                 type="text"
@@ -85,7 +82,6 @@ function ContactForm() {
               />
             </div>
 
-            {/* Message */}
             <div className="mt-8">
               <textarea
                 name="message"

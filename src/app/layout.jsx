@@ -1,7 +1,7 @@
 import { Figtree, Geist_Mono } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import SmoothScrollWrapper from "@/components/Lenis";
+// import SmoothScrollWrapper from "@/components/Lenis";
 import "./globals.css";
 
 const figtree = Figtree({
@@ -31,11 +31,11 @@ export default function RootLayout({ children }) {
       className={`${figtree.variable} ${geistMono.variable} h-full font-sans antialiased `}
     >
       <body className="min-h-full flex flex-col">
-        <SmoothScrollWrapper>
-          <Navbar />
-          {children}
-          <Footer />
-        </SmoothScrollWrapper>
+        {/* <SmoothScrollWrapper> */}
+        <Navbar />
+        {children}
+        <Footer />
+        {/* </SmoothScrollWrapper> */}
         {/* <Toaster
           theme="dark"
           position="top-right"

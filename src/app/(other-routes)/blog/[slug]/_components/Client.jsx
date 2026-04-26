@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { shimmer } from "@/lib/placeholder";
 import { Calendar, Clock, ArrowUpRight } from "lucide-react";
 
 function TextSection({ section }) {
@@ -71,6 +72,8 @@ export default function BlogPostClient({ blog, related }) {
             alt={blog.title}
             fill
             className="object-cover"
+            placeholder="blur"
+            blurDataURL={shimmer}
             priority
           />
         </div>
@@ -88,6 +91,8 @@ export default function BlogPostClient({ blog, related }) {
               alt={midImage.alt}
               fill
               className="object-cover"
+              placeholder="blur"
+              blurDataURL={shimmer}
             />
           </div>
         </div>
@@ -118,6 +123,8 @@ export default function BlogPostClient({ blog, related }) {
                     <Image
                       src={post.image}
                       alt={post.title}
+                      placeholder="blur"
+                      blurDataURL={shimmer}
                       fill
                       className="object-cover transition-transform duration-500 group-hover:scale-105"
                     />

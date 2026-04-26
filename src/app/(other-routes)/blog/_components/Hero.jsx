@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 
 const categories = [
   "All blogs",
@@ -16,7 +15,6 @@ export default function HeroSection({ activeCategory, onCategoryChange }) {
         Blog
       </h1>
 
-      {/* Category filters */}
       <div className="flex flex-wrap gap-2">
         {categories.map((cat) => (
           <button

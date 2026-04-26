@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { shimmer } from "@/lib/placeholder";
 
 export default function HeroSection() {
   return (
@@ -10,6 +11,8 @@ export default function HeroSection() {
             alt="Professor Hero"
             width={520}
             height={620}
+            placeholder="blur"
+            blurDataURL={shimmer}
             className="object-contain object-bottom h-full w-auto"
             priority
           />
@@ -45,6 +48,8 @@ export default function HeroSection() {
             alt="Hero"
             fill
             sizes="100vw"
+            placeholder="blur"
+            blurDataURL={shimmer}
             style={{ objectFit: "cover", objectPosition: "center center" }}
             priority
           />

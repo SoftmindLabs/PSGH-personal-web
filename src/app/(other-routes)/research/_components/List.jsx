@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { research } from "@/data/research";
+import { shimmer } from "@/lib/placeholder";
 
 function ResearchList() {
   return (
@@ -19,6 +20,8 @@ function ResearchList() {
                   <Image
                     src={item.image}
                     alt={item.title}
+                    placeholder="blur"
+                    blurDataURL={shimmer}
                     fill
                     className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-105"
                   />
