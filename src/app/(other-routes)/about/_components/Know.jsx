@@ -53,7 +53,7 @@ function KnowMe() {
             {reasons.map((reason, i) => (
               <div key={i} className="flex items-start gap-3 text-black">
                 <span className="mt-[0.7em] w-1.5 h-1.5 rounded-full bg-black shrink-0" />
-                <p className="text-sm md:text-xl leading-relaxed">
+                <p className="text-sm md:text-xl md:leading-relaxed">
                   <span className="font-bold">{reason.title}</span>{" "}
                   {reason.description}
                 </p>

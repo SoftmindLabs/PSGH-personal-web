@@ -35,19 +35,21 @@ function JobExperience() {
           {jobs.map((job, i) => (
             <div
               key={i}
-              className="flex items-start justify-between gap-6 py-8 border-b border-black/10"
+              className="flex flex-col gap-6 py-8 border-b border-black/10"
             >
-              <div className="flex flex-col gap-1">
+              <div className="flex items-center justify-between">
                 <p className="text-sm md:text-base uppercase tracking-wide text-black">
                   {job.role}
                 </p>
-                <h3 className="font-bold text-3xl md:text-5xl text-black tracking-tighter">
+                <p className="text-sm md:text-base text-black shrink-0">
+                  {job.period}
+                </p>
+              </div>
+              <div>
+                <h3 className="font-bold text-3xl md:text-5xl text-black tracking-tighter ">
                   {job.company}
                 </h3>
               </div>
-              <p className="text-sm md:text-base text-black shrink-0">
-                {job.period}
-              </p>
             </div>
           ))}
         </div>

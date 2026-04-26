@@ -23,6 +23,7 @@ export default function HeroSection() {
               style={{ objectFit: "cover", objectPosition: "center center" }}
               priority
             />
+
             <div className="absolute inset-0 bg-linear-to-t from-black via-black/30 to-transparent" />
           </div>
         </section>
