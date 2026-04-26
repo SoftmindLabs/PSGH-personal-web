@@ -61,10 +61,10 @@ function Footer() {
             <h2 className="text-7xl md:text-[10rem] font-bold text-black leading-none tracking-tighter">
               Let's Work <br /> Together
             </h2>
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-2 md:gap-4">
               <Link
                 href="/contact"
-                className="flex items-center gap-2 bg-black text-white px-6 py-3 text-sm md:text-lg font-medium hover:bg-black/80 transition-colors"
+                className="flex items-center gap-2 bg-black text-white px-4 md:px-6 py-3 text-sm md:text-lg font-medium hover:bg-black/80 transition-colors"
               >
                 Contact Now <ArrowRight size={16} />
               </Link>
@@ -72,7 +72,7 @@ function Footer() {
                 href="https://wa.me/001313759968345"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 border border-black text-black px-6 py-3 text-sm md:text-lg font-medium hover:bg-black hover:text-white transition-colors"
+                className="flex items-center gap-2 border border-black text-black px-4 md:px-6 py-3 text-sm md:text-lg font-medium hover:bg-black hover:text-white transition-colors"
               >
                 Schedule a call <ArrowRight size={16} />
               </a>

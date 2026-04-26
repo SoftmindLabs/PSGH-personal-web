@@ -7,7 +7,6 @@ const categories = [
   "Insights",
   "Design",
   "Creativity",
-  "Freelancing",
 ];
 
 export default function HeroSection({ activeCategory, onCategoryChange }) {

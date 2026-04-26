@@ -11,7 +11,7 @@ function Blogs({ activeCategory }) {
       : blogs.filter((b) => b.category === activeCategory);
 
   return (
-    <section className="w-[95%] px-2 md:px-10 mx-auto pt-20 md:pt-40">
+    <section className="w-[95%] px-2 md:px-10 mx-auto pt-10">
       <div className="grid grid-cols-1 md:grid-cols-[1fr_2fr] gap-10 items-start">
         <div className="md:sticky md:top-20">
           <p className="font-semibold text-base md:text-xl border-l-5 uppercase pl-3">
