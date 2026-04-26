@@ -7,7 +7,7 @@ import { X } from "lucide-react";
 const navLinks = [
   { label: "About", href: "/about" },
   { label: "Research", href: "/research" },
-  { label: "Publications", href: "/publications" },
+  { label: "Blog", href: "/blog" },
   { label: "Contact", href: "/contact" },
 ];
 

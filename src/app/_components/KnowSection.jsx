@@ -11,7 +11,7 @@ function Know() {
             </p>
           </div>
           <div className="flex flex-col gap-5">
-            <h1 className="md:w-[80%] font-semibold text-xl md:text-4xl tracking-normal">
+            <h1 className="md:w-[80%] font-semibold text-xl md:text-4xl tracking-tighter">
               A passionate designer, developer, and problem-solver dedicated to
               crafting meaningful digital experiences. With 10 years of
               experience in the creative industry, I specialize in blending
